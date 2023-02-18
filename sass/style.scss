@@ -1,0 +1,278 @@
+@import "variables.scss", "mixins.scss";
+*{
+    box-sizing: border-box;
+    margin: 0;
+    // border: red 1px solid;
+}
+body{
+   background-color: #F3F3F3;
+   font-family: 'Roboto', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+body header {
+    background-color: $fondoNegro;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    div {
+        padding: 20px;
+    }
+    div.menu{
+        padding-top: 28px;
+       
+    }
+}
+body header ul{
+    color: $Colorletraheader;
+    display:flex;
+    display: none;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    justify-content: space-evenly;
+    width: 300px;
+    margin-left: 50vw;
+    padding-top: 30px;
+}
+body header div.carrito{
+    display: none;
+    padding-top: 25px;
+}
+
+main section.fondo1{
+   background-image: url(../img/fondo1.png); 
+   height: 412px;
+   display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+main section h1 span {
+    color: red;
+}
+main section h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    color: #F3F3F3;
+    padding-top: 110px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+main section button{
+    background-color: $fondoBoton ;
+    color:#F3F3F3 ;
+    font-size: 20px;
+    width: 185px;
+    height: 55px;
+    margin-top: 30px;
+    border:0;
+    border-radius: 5px;
+}
+
+main section.seccionJuegos {
+    background-color: $fondomain;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   article{
+        background-color: $fondoArticulo ;
+        width: 240px;
+        height: 322px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+        padding-top: 35px;
+    }
+    h2{
+        padding-top: 25px;
+        padding-bottom: 50px;
+        font-weight: 400;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .envio{
+        color: #619D00;
+        font-size: 10px
+    }
+    .precio{
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .cuota{
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .datosJuego{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        padding-right: 42px;
+    }
+    hr {
+        
+        width: 240px;
+        margin-top:20px;
+        border: rgb(159, 153, 153) 0.001px solid;
+       
+      }
+   
+}
+h3{
+    text-align: center;
+    font-weight: 400;
+    font-size: 25px;
+    margin-top: 35px;
+}
+section article p.fondoSilla{
+    background-image: url(../img/banner\ 1.png);
+    width: 288px;
+    height: 108px;
+    margin: 50px;
+    color:  #F3F3F3;
+    font-size: 15px;
+    padding: 45px 0px 0px 175px;
+}
+section article p.fondoComputadora{
+    background-image: url(../img/banner2.png);
+    width: 288px;
+    height: 108px;
+    margin: 50px;
+    color:  #F3F3F3;
+    font-size: 15px;
+    padding: 45px 30px 0px 175px;
+}
+footer div.generalFooter{
+    background-color:  #222222; 
+    height: 191px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+    p.tituloredes{
+        color:#F3F3F3;
+        text-align: center;
+        font-size: 25px;
+  
+    }
+    div.redes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    div.redesLogos {
+        width: 160px;
+        margin-top: 30px;
+        display:flex;
+        justify-content: space-between;
+    }
+    
+}  
+footer p.parrafoFinal{
+       height: 25px;
+        background-color: #C4C4C4;
+        text-align: center;
+        font-size: 10px;
+        padding-top: 2px;
+        
+    }
+
+
+@media (min-width: 450px){
+    body header div.menu{
+        display: none;
+    }
+    body header ul{
+        
+        display:flex;
+        
+    }
+    body header div.carrito{
+      display: block;
+    }
+    main section h1{
+        padding-top: 200px;
+        font-size: 40px;
+    }
+    main section.fondo1{
+        background-image: url(../img/fondoGrande.png);
+        background-size: cover; 
+        height: 512px;
+    }
+    
+      main section div.queris{
+        background-color: $fondomain;
+        display: flex;
+        flex-direction: row;
+       align-items: center;
+    //    justify-content: space-around;
+       }
+        main section div.queris article{
+            background-color: $fondoArticulo ;
+            width: 240px;
+            height: 322px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-top: 35px;
+            margin-left: 25px;
+        }
+
+
+    .sillaycomputadora{
+        display: flex;
+        flex-direction: row;
+        // justify-content: space-evenly;
+        .fondoSilla{
+            display: flex;
+            margin-left: 350px;
+            
+        }
+        // .fondoComputadora{
+        //    display: flex;
+           
+        // }
+    }
+    footer{
+        background-color:  #222222;
+        .generalFooter{
+            display: flex;
+            flex-direction: row;
+           justify-content: space-between;
+        }
+        div img.logo{
+            // margin-top: 35px;
+            // margin-left: 80px;
+            padding-top: 40px;
+        }
+        div.redesLogos{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        p.tituloredes{
+            color:#F3F3F3;
+            text-align: center;
+            font-size: 25px;
+            // margin-top: 30px;
+      
+        }
+        
+           
+        }
+    footer div.generalFooter{ 
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 50px 0px 50px;
+        p.tituloredes{
+            color:#F3F3F3;
+            text-align: center;
+            font-size: 25px;
+        }
+    }
+    footer p.parrafoFinal {
+        font-size: 13px;
+        padding: 5px;
+    }
+}
